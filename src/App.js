@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-// import { renderRoutes } from 'react-router-config';
+import { HashRouter, Route, Switch, Redirect, BrowserRouter} from 'react-router-dom';
+//import { renderRoutes } from 'react-router-config';
 
-import {
-  BrowserRouter as Router,
-  Link,
-  Redirect,
-  withRouter
-} from 'react-router-dom'
 
 import './App.scss';
 
