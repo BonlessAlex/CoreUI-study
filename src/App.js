@@ -48,7 +48,8 @@ class App extends Component {
               <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
 
               {/* use auth route for this protected page */}
-              <AuthRoute path="/" name="Home" render={props => <DefaultLayout {...props}/>} /> 
+              {/* <AuthRoute path="/" name="Home" render={props => <DefaultLayout {...props}/>} />  */}
+              <AuthRoute path="/" name="Home" component={DefaultLayout} />
               
             </Switch>
           </React.Suspense>

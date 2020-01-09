@@ -28,8 +28,10 @@ class DefaultLayout extends Component {
 
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
 
-  signIn(e) {
+  // Log out
+  signOut(e) {
     e.preventDefault()
+    localStorage.removeItem("token")
     this.props.history.push('/login')
   }
   
@@ -38,7 +40,7 @@ class DefaultLayout extends Component {
       <div className="app">
         <AppHeader fixed>
           <Suspense  fallback={this.loading()}>
-            <DefaultHeader onLogIn={e=>this.signIn(e)}/>
+            <DefaultHeader onLogOut={e=>this.signOut(e)}/>
           </Suspense>
         </AppHeader>
         <div className="app-body">
